@@ -1,0 +1,106 @@
+html,
+body {
+    height: 100%;
+    background-color: solid peru;
+}
+
+div {
+    color: solid olive;
+    font-size: 40px;
+    width: 100%;
+    height: 80px;
+    background-color: solid black;
+    border: solid red 2px;
+    border-width: 8px 20px 15px 1px;
+}
+
+div {
+    background-color: solid lightcoral;
+    padding: 10px 20px;
+    /* ak zadam iba dve hodnoty budu bocne rovnako a horne a spodny rovnako */
+    margin: 30px 20px 10px 0px;
+    width: 30%;
+    height: 60px;
+    display: inline-block;
+    /* inline-block sposobi, ze nam text zabera len kolko potrebuje */
+}
+
+span {
+    color: solid green;
+    background-color: solid pink;
+    font-size: 30px;
+    border: 5px solid purple;
+    display: block;
+}
+
+/* ul.list {
+    border: solid lightgreen;
+    background-color: solid lightslategray;
+} */
+
+.list {
+    border: solid blue;
+    background-color: solid skyblue;
+}
+
+/* .list li {
+    border: solid plum;
+    padding: 10px 20px;
+} */
+
+ul li {
+    background-color: blueviolet;
+    border: 20px solid goldenrod;
+}
+
+div>strong {
+    color: pink;
+}
+
+div strong {
+    color: green;
+}
+
+strong {
+    color: yellowgreen;
+}
+
+ul li {
+    color: red;
+}
+
+a[title] {
+    color: lightseagreen;
+}
+
+a {
+    color: red;
+}
+
+a .link {
+    color: green;
+}
+
+.pseudo-selector li:first-child {
+    color: yellow;
+}
+
+.pseudo-selector li:nth-child(3) {
+    color: lightgreen;
+}
+
+.pseudo-selector li:last-child {
+    color: blue;
+}
+
+button:disabled {
+    background-color: black;
+}
+
+a:hover {
+    font-weight: bold;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}

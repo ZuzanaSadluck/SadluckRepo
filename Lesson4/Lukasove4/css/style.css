@@ -1,0 +1,153 @@
+/* nazov tagu ako selektor cez ciarku viem naraz viacej selektnut html tagov a dat im rovnaky style */
+
+html,
+body {
+    height: 100%;
+}
+
+/* nepoužívať iba na zisťovanie prečo moje elementy nerobia to čo chcem */
+
+/*
+* { 
+  border: 1px solid red !important; 
+}
+*/
+
+/* nazov tagu ako selektor a do kučeravých zatvoriek píšem styles { sem picem schopnosti } */
+
+div {
+    border: 1px solid black;
+    /*  border vam vytvorí ramček okolo selektnutých div html tagov bude 1px hruby a čiernej farby */
+    padding: 30px 20px 10px 0;
+    /* vnútorný okraj */
+    margin: 30px 20px 10px 0;
+    /* vonkajší okraj */
+    width: 50%;
+    /* šírka */
+    height: 30px;
+    /* výška */
+}
+
+/* nazov tagu ako selektor span je display inline block element zabera iba toľko koľko potrebuje */
+
+span {
+    border: 1px solid red;
+    /*  border vam vytvorí ramček okolo selektnutých span html tagov bude 1px hruby a modrej farby */
+    border-width: 10px 5px 3px 0;
+}
+
+/* nazov tagu ako selektor */
+
+p {
+    font-size: 30px;
+    /* veľkosť písma */
+}
+
+/* selectnem p tagy ktore obsahujú atribut class .orange */
+
+p.orange {
+    color: orange;
+}
+
+/* selektli sme vsetky elementy ktore maju v atribute class nazov list t.j. napr <ul class="list"></ul> */
+
+.list {
+    border: 1px solid black;
+    /*  border vam vytvorí ramček okolo selektnutých div html tagov bude 1px hruby a čiernej farby */
+    background-color: blue;
+    /*  background-color pridava modre pozadie */
+}
+
+/* druhy class selektor vieme pouzivat viacej selektorov naraz pre jeden element napr <ul class="list list-specialny"></ul> */
+
+.list-specialny {
+    background-color: red;
+}
+
+/*selectnem vsetky li elementy ktore su obalene elementami ktoré maju v atribute class nazov list-specialny */
+
+.list-specialny li {
+    display: inline-block;
+    /* pomocou display: inline-block; poviem nech elementy zaperaju len tolko kolko potrebuju */
+}
+
+/* id ako selector nepouzivat!!! */
+
+#intro {
+    color: red;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/*----- speciality pseudo selektory -----*/
+
+div>strong {
+    background-color: red;
+}
+
+/* priama nadradenosť selektnem vsetky div strong elementy ktore su obalene div elementom */
+
+div strong {
+    background-color: green;
+}
+
+/* selektnem vsetky strong elementy ktore su obalene div elementom */
+
+div>strong {
+    background-color: red;
+}
+
+.link {
+    color: green;
+}
+
+/* selektnutie pomocou obsahujuceho atributu pre dany html tag a */
+
+a[title] {
+    color: blue;
+    font-size: 50px;
+}
+
+/* sleketnem vsetky a tagy v body ktore maju atribut title */
+
+a {
+    color: red;
+}
+
+a.link {
+    color: green;
+}
+
+/* selektnem prve li zoznam ul ktorý ma class atribut s nazvom pseudo-selektor  */
+
+.pseudo-selektor li:first-child {
+    color: red;
+}
+
+/* selektnem posledné li v zozname ul ktorý obsahuje class atribut s nazvom pseudo-selektor */
+
+.pseudo-selektor li:last-child {
+    color: red;
+}
+
+/* selektnem li v zozname ul ktorý obsahuje class atribut s nazvom pseudo-selektor podla toho aké číslo definujem v zátvorke */
+
+.pseudo-selektor li:nth-child(2) {
+    color: green;
+}
+
+/* buttony ak su neklikatelne vdaka pridanemu atributu disabled dostanu tuto farbu pozadia */
+
+button:disabled {
+    background-color: black;
+}
+
+/* pseudo trieda ak pridem mysou nad a tagy tak pridam mu tieto styles */
+
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
